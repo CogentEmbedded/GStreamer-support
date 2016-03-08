@@ -21,3 +21,5 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 install(TARGETS ${PROJECT_NAME} DESTINATION lib)
+# Install common headers
+INSTALL(FILES ${PROJECT_SOURCE_DIR}/shmpipe.h DESTINATION include)
