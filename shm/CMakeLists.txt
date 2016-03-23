@@ -1,5 +1,7 @@
 cmake_minimum_required (VERSION 2.8)
 project("gstshm")
+include(GNUInstallDirs)
+
 enable_testing()
 
 set (PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR})
@@ -25,8 +27,11 @@ set_target_properties(${PROJECT_NAME}
     SOVERSION 1
 )
 
-install(TARGETS ${PROJECT_NAME} DESTINATION lib)
+message(STATUS "${CMAKE_INSTALL_LIBDIR}")
+
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_LIBDIR})
 # Install common headers
-INSTALL(FILES ${PROJECT_SOURCE_DIR}/shmpipe.h DESTINATION include)
+INSTALL(FILES ${PROJECT_SOURCE_DIR}/shmpipe.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 add_subdirectory(packaging)
+
