@@ -19,6 +19,11 @@ add_library(${PROJECT_NAME} SHARED ${PRJ_SRC})
 target_link_libraries(${PROJECT_NAME}
     rt
 )
+set_target_properties(${PROJECT_NAME}
+  PROPERTIES
+    VERSION 1.6.3
+    SOVERSION 1
+)
 
 install(TARGETS ${PROJECT_NAME} DESTINATION lib)
 # Install common headers
