@@ -16,8 +16,7 @@ SET(CPACK_PACKAGE_INSTALL_DIRECTORY "CMake ${CMake_VERSION_MAJOR}.${CMake_VERSIO
 
 SET(CPACK_STRIP_FILES "lib/*.so")
 
-SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.3.1-6),\
-                                    libgcc1 (>= 1:3.4.2-12)"
+SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.3.1-6), libgcc1 (>= 1:3.4.2-12)"
 )
 
 include(CPack)
