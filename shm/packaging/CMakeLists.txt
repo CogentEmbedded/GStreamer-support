@@ -1,6 +1,6 @@
 include(InstallRequiredSystemLibraries)
 
-SET(CPACK_GENERATOR "DEB")
+SET(CPACK_GENERATOR DEB RPM TGZ ZIP)
 
 SET(CPACK_PACKAGE_NAME "libgstshm")
 
