@@ -23,6 +23,9 @@ set(PRJ_SRC
     ${PROJECT_SOURCE_DIR}/shmpipe.c
 )
 
+FIND_PACKAGE(Gstreamer-1.0 REQUIRED)
+FIND_PACKAGE(GLIB REQUIRED)
+
 include_directories(
     ${PROJECT_INCLUDE_DIR}
     ${GLIB_INCLUDE_DIRS}
